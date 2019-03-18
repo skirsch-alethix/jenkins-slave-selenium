@@ -6,7 +6,7 @@ RUN yum install -y epel-release && \
     yum install -y redhat-rpm-config \
     xmlstarlet x11vnc gettext \
     xorg-x11-server-Xvfb openbox xterm \
-    net-tools nss_wrapper \
+    net-tools nss_wrapper
     
 # Copy the entrypoint
 COPY configuration/* /var/lib/jenkins/
