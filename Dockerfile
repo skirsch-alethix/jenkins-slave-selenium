@@ -1,4 +1,4 @@
-FROM skirschalethix/selenium-cucumber-centos
+FROM skirschalethix/selenium-cucumber-centos:v1
 LABEL maintainer="Deven Phillips <deven.phillips@redhat.com>"
 
 RUN yum clean all && \
