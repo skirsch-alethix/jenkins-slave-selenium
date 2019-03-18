@@ -6,7 +6,8 @@ RUN yum clean all && \
     xmlstarlet x11vnc gettext \
     xorg-x11-server-Xvfb openbox xterm \
     net-tools nss_wrapper \
-    java-1.8.0-openjdk-headless
+    java-1.8.0-openjdk-headless \
+    rubygem-nokogiri
     
 # Copy the entrypoint
 COPY configuration/* /var/lib/jenkins/
