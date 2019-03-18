@@ -13,6 +13,8 @@ COPY configuration/* /var/lib/jenkins/
 COPY configuration/run-jnlp-client /usr/local/bin/run-jnlp-client
 
 ENV JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk \
+    GEM_PATH=/usr/local/rvm/gems/ruby-2.5.3:/usr/local/rvm/gems/ruby-2.5.3@global \
+    GEM_HOME=/usr/local/rvm/gems/ruby-2.5.3 \
     PATH=$JAVA_HOME/bin:/usr/local/rvm/rubies/ruby-2.5.3/bin:/usr/local/rvm/gems/ruby-2.5.3/bin:$PATH \
     HOME=/var/lib/jenkins
 
