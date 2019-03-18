@@ -5,7 +5,8 @@ LABEL maintainer="Deven Phillips <deven.phillips@redhat.com>"
 COPY configuration/* /var/lib/jenkins/
 COPY configuration/run-jnlp-client /usr/local/bin/run-jnlp-client
 
-ENV HOME=/var/lib/jenkins
+ENV JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk/ \
+    HOME=/var/lib/jenkins
 
 RUN chown root:root -R /var/lib/jenkins && \
     chmod 777 /var/lib/jenkins -R && \
