@@ -1,8 +1,7 @@
 FROM skirschalethix/selenium-cucumber-centos
 LABEL maintainer="Deven Phillips <deven.phillips@redhat.com>"
 
-RUN yum install -y epel-release && \
-    yum clean all && \
+RUN yum clean all && \
     yum install -y redhat-rpm-config \
     xmlstarlet x11vnc gettext \
     xorg-x11-server-Xvfb openbox xterm \
