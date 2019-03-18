@@ -1,6 +1,13 @@
 FROM skirschalethix/selenium-cucumber-centos
 LABEL maintainer="Deven Phillips <deven.phillips@redhat.com>"
 
+RUN yum install -y epel-release && \
+    yum clean all && \
+    yum install -y redhat-rpm-config \
+    xmlstarlet x11vnc gettext \
+    xorg-x11-server-Xvfb openbox xterm \
+    net-tools nss_wrapper \
+    
 # Copy the entrypoint
 COPY configuration/* /var/lib/jenkins/
 COPY configuration/run-jnlp-client /usr/local/bin/run-jnlp-client
