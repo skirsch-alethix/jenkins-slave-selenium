@@ -1,0 +1,2 @@
+openbox &
+xsetroot -solid black
