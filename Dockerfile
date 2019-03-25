@@ -11,7 +11,7 @@ RUN yum install -y epel-release && \
     zlib zlib-devel patch readline readline-devel libyaml-devel libffi-devel openssl-devel \
     bzip2 libtool bison sqlite-devel which freetds-devel yum-utils device-mapper-persistent-data lvm2 && \
     yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo && \
-    yum install docker-ce docker-ce-cli containerd.io && \
+    yum install -y docker-ce docker-ce-cli containerd.io && \
     mkdir -p /var/lib/jenkins/.vnc
 
 RUN export PATH=$PATH:$HOME/.rbenv/bin:$HOME/.rbenv/shims && \
